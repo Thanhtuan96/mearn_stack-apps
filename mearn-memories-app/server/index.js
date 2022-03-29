@@ -4,9 +4,9 @@ import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import postRoutes from './routers/posts.js';
-
+import db from './db.js';
 dotenv.config();
-
+db();
 const app = express();
 const port = process.env.PORT || 5000;
 
