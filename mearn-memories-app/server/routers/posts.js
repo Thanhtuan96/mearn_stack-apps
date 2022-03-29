@@ -5,4 +5,6 @@ import { getPosts } from '../controllers/postsController.js';
 
 router.get('/', getPosts);
 
+router.post('/', createPost)
+
 export default router;
