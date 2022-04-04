@@ -71,7 +71,7 @@ export const Form = () => {
                     <FileBase
                         type='file'
                         mutiple={false}
-                        onDone={(base64) => {
+                        onDone={({ base64 }) => {
                             setPostData({ ...postData, selectedFile: base64 });
                         }}
                     />
