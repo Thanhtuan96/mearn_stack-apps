@@ -13,7 +13,7 @@ import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import moment from 'moment';
 import useStyles from './styles';
 
-export const Post = ({ post }) => {
+export const Post = ({ post, setCurrentId }) => {
     const classes = useStyles();
     return (
         <Card className={classes.card}>
