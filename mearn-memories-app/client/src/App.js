@@ -10,11 +10,11 @@ const App = () => {
     const classes = useStyles();
     const dispatch = useDispatch();
 
-    const [currentId, setCurrentId] = useState(null);
+    const [currentId, setCurrentId] = useState(0);
 
     useEffect(() => {
         dispatch(getPosts());
-    }, []);
+    }, [currentId, dispatch]);
     return (
         <Container maxWidth='lg'>
             <AppBar
@@ -40,6 +40,7 @@ const App = () => {
             <Grow in>
                 <Container>
                     <Grid
+                        className={classes.mainContainer}
                         container
                         justifyContent='space-between'
                         alignItems='stretch'
