@@ -1,8 +1,12 @@
 import mongoose from 'mongoose';
+const CONNECT_URL =
+    'mongodb+srv://tuancon:Tuancon96@cluster0.irqq5.mongodb.net/test';
 const db = () => {
     mongoose
-        .connect(process.env.CONNECT_URL)
-        .then(() => console.log('database connected....'))
+        .connect(CONNECT_URL)
+        .then((data) => {
+            console.log('database connected....');
+        })
         .catch((err) => {
             console.log(err);
         });

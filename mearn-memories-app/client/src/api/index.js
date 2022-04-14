@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 //get json data from server
-const url = 'http://localhost:5000/posts';
+const url = 'https://mern-stack-memories-app-1.herokuapp.com/posts';
 
 export const fetchPosts = () => axios.get(url);
 
